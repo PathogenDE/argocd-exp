@@ -6,6 +6,9 @@ metadata:
 spec:
   containers:
   - name: nginx
+    env:
+      - name: super_secret
+        value: <PLACEHOLDER>
     image: nginx:1.14.2
     ports:
     - containerPort: 80
