@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sample-app
+  name: sample-app-secret
   namespace: argocd
 spec:
   destination:
-    namespace: sample-app
+    namespace: sample-app-secret
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: sample-app/
-    repoURL: https://github.com/kurtburak/argocd.git
+    path: sample-app-secret/
+    repoURL: https://github.com/PathogenDE/argocd-exp
     targetRevision: HEAD
   syncPolicy:
     syncOptions:
