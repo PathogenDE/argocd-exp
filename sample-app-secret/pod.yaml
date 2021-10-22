@@ -2,13 +2,13 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
-  namespace: sample-app-secret
+  namespace: sample-app-secret    
 spec:
   containers:
   - name: nginx
     env:
       - name: super_secret
-        value: <PLACEHOLDER>
+        value: <path:secret/sample#super_secret>
     image: nginx:1.14.2
     ports:
     - containerPort: 80
