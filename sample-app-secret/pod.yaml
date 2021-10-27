@@ -8,7 +8,7 @@ spec:
   - name: nginx
     env:
       - name: super_secret
-        value: <path:secret/sample#super_secret>
+        value: <path:argocd/sample#super_secret>
     image: nginx:1.14.2
     ports:
     - containerPort: 80
